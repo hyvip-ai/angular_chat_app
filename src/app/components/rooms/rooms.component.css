@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+.container-fluid{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.col-4{
+/* border: 1px solid black; */
+height: 100vh;
+overflow: auto;
+
+}
+
+.col-4 span{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: #eee;
+    font-weight: bolder;
+    margin: 10px auto;
+}
+
+.col-8{
+    /* border: 1px solid black; */
+    height: 100vh;
+    overflow: auto;
+
+    padding: 0px;
+
+}
+
+.col-8{
+    position: relative;
+}
+.col-8 form{
+    /* border: 2px solid red; */
+    display: block;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 90%;
+   
+
+}
+
+.col-8 form input{
+    display: inline-block;
+    width: 80%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    height: 6vh;
+    border-bottom: 2px solid black;
+}
+
+.col-8 form button{
+    display: inline-block;
+    width: 10%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 6vh;
+    background-color: rgb(66, 176, 255);
+   
+}
+button:hover{
+    background-color: rgb(50, 149, 220);
+}
+
+.mine{
+    background-color: rgb(14, 47, 14);
+    color: white;
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+.others{
+background-color: rgb(17,17,17);
+    color: white;
+    font-weight: bolder;
+    font-family: cursive;
+}
+.row   {
+    margin-bottom:50px;
+}
+
+.col-5{
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}

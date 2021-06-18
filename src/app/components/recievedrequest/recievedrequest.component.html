@@ -1,0 +1,22 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Username</th>
+            <th>Status</th>
+            <th>Conversation</th>
+            <th>Reject</th>
+        </tr>
+    </thead>
+    <tbody *ngIf='mydata'>
+        <tr *ngFor = 'let item of mydata.messege;index as i'>
+            <td>{{i+1}}</td>
+            <td>{{item.sender.username}}</td>
+            <td>{{item.status}}</td>
+            <td><button class="btn btn-outline-success" (click)='accept(item.sender._id)'>Start Conversation</button></td>
+            <td><button class="btn btn-outline-danger" (click)='reject(item._id)'>Reject Request</button></td>
+            
+        </tr>
+
+    </tbody>
+</table>

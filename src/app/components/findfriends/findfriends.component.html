@@ -1,0 +1,23 @@
+<!-- <p>findfriends works!</p> -->
+
+
+
+<table class="table table-hover">
+<thead>
+    <tr>
+        <th>Number</th>
+        <th>UserName</th>
+        <th>Chat</th>
+        <th>Chat</th>
+    </tr>
+</thead>
+<tbody *ngIf='user'> 
+    <tr *ngFor='let item of user.users;index as i'>
+        <td>{{i+1}}</td>
+        <td>{{item.username}}</td>
+        <td><button class="btn btn-primary" id="{{item.username}}" (click)='createrequest(item._id,item.username)'>Create Request</button></td>
+        <td> <button class="btn btn-outline-primary" (click) = 'clearit(item._id)'>Clear Request</button></td>
+    </tr>
+</tbody> 
+
+</table>

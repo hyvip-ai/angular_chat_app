@@ -1,0 +1,37 @@
+<div class="container-fluid" id="main">
+    <div class="row  d-flex align-items-center justify-content-center" id="login-page">
+      <div class="col-lg-4 col-sm-12 col-xs-12 col-md-6" id="content"> <span class="text-center"> 
+ </span> 
+        <div class="text-center">
+          <h1 class="title">Chat App</h1>
+          <p class="sub-title">Best Chat App So Far</p>
+          <p class="sub-title">Sign up now</p>
+        </div>
+        <!-- login form starts -->
+        <div class="form-group d-block mx-auto">
+          <form class="mx-auto" autocomplete="off" [formGroup]='signupform'>
+            <input type="text" class="form-control" name="userEmail" id="user-email-id"
+              aria-describedby="helpEmail" placeholder="Enter your Name" formControlName = 'name' autocomplete="off" required autocomplete="off">
+            <input formControlName = 'password' type="password" class="form-control" name="userPW" id="createPW" placeholder="Create your password" required autocomplete="off">
+         
+            <input formControlName = 'username' type="text" class="form-control" name="userConfirmPW" id="confirmPW" placeholder="Enter UserName" required>
+            <div class="text-center"> 
+                <div id="CheckPassword">
+                  </div>
+              <button class="btn btn-primary mt-3" id="loginBtn" (click)='submitform()'>Next</button> 
+            </div>
+          </form>
+
+          <!-- login form ends-->
+          <div class="text-center mt-3">
+            Already have an account? <a routerLink = '/Login'> Log in</a>
+            
+          </div>
+ 
+        </div>
+      </div>
+
+    </div>
+
+ 
+   </div>

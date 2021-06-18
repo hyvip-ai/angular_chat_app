@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "chatapp"
+  "defaultProject": "chatapp",
+  "cli": {
+    "analytics": "98126373-bd48-4887-9f0f-44228d257f4b"
+  }
 }

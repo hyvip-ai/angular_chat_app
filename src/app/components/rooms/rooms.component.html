@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 members" *ngIf = 'mymember'>
+            <span *ngFor = 'let item of mymember.group.members'>{{item}} Is In The Room</span>
+           
+                <button class="btn btn-outline-info" (click)='leave()'>Leave Room</button>
+
+        </div>
+        <div class="col-8">
+         <div *ngIf='mymesseges' class="container" style="height: 90vh;overflow: auto;">
+             <!-- <div class="row" >
+                
+                    <div class="col-5">
+                        {{item.text}}here it is
+                    </div>
+               
+             </div> -->
+
+             <div *ngFor='let item of mymesseges.messeges'>
+
+                <div class="row justify-content-end" *ngIf='item.sender.username==myusername' >
+                    <div class="mine col-5"> 
+                        <p style="text-align: left;">{{item.sender.username}}(You)</p>
+                     
+                          {{item.text}}
+                    </div>
+                </div>
+                <div class="row justify-content-start" *ngIf = 'item.sender.username != myusername'>
+                    <div class="others col-5">
+                        <p style="text-align: left;">{{item.sender.username}}</p> 
+                           {{item.text}}
+                    </div>
+                </div>
+            
+            </div>
+         </div>
+<form id="form" [formGroup]='msgform'>
+  <input id="input" formControlName='text' name="messege" autocomplete="off" /><button (click)= 'sendmsg()' [disabled]='!msgform.valid'>Send</button>
+</form>
+        </div>
+    </div>
+</div>
